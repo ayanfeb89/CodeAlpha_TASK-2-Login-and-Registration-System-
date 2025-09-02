@@ -1,23 +1,25 @@
 #include<iostream>
 #include<fstream>
+#include<string>
+#include<limits>
 using namespace std;
 int main()
 {
-    cout<<"Choose any one"<<endl<<"1. Registration"
-    <<endl<<"2. Login"<<endl<<"3. Quit"<<endl;
     while(true)
     {
+        cout<<"Choose any one"<<endl<<"1. Registration"
+    <<endl<<"2. Login"<<endl<<"3. Quit"<<endl;
         int c;
         cout<<"Enter the choice: ";
         cin>>c;
         if(c==1)
         {
-            string username,password;
+           string username,password;
             cout<<"Enter the Username: ";
-            cin.ignore();
-            getline(cin,username);
-            cout<<"Enter the Password: ";
+            cin>>username;
+            cout<<"Enter the password: ";
             cin>>password;
+
 
             ifstream inputfile("identity.txt");
                 string u,p;
@@ -46,8 +48,7 @@ int main()
         {
             string username,password;
             cout<<"Enter the Username: ";
-            cin.ignore();
-            getline(cin,username);
+            cin>>username;
             cout<<"Enter the password: ";
             cin>>password;
 
